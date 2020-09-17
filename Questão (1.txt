@@ -1,0 +1,36 @@
+
+let p;
+
+beforeEach(() => {
+    p = new Questao3(10);
+});
+
+test("iniciando pilha", () => {
+    q.empilhaA('A');
+    q.empilhaB('B');
+    expect(p.topoA).toBe(0);
+    expect(p.topoB).toBe(9);
+});
+
+test("teste de vazio", () => {
+    expect(p.desempilhaA).toThrowError();
+    expect(p.desempilhaB).toThrowError();
+});
+
+
+test("teste de vazio", () => {
+    p.empilhaA('A');
+    p.empilhaB('B');
+    p.empilhaA('A');
+    p.empilhaB('B');
+    p.empilhaA('A');
+    p.empilhaB('B');
+    p.empilhaA('A');
+    p.empilhaB('B');
+    p.empilhaA('A');
+    p.empilhaA('A');
+    p.empilhaB('B');
+    p.empilhaB('B');
+    expect(q.empilhaA('C')).toBe('');
+    expect(q.empilhaB('C')).tobE('c');
+});
